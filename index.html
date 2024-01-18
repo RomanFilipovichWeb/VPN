@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>VPN</title>
+</head>
+<body>
+
+	<header class="header" id="header">
+		<div class="container">
+			<div class="header__item">
+				<img class="header__logo" src="images/logo.png" alt="">
+				<nav class="nav" id="nav">
+					<a class="nav__link" href="#" data-scroll="#">О нас</a>
+					<a class="nav__link" href="#" data-scroll="#features">Особенности</a>
+					<a class="nav__link" href="#" data-scroll="#pricing">Цены</a>
+					<a class="nav__link" href="#" data-scroll="#">Отзывы</a>
+					<a class="nav__link" href="#" data-scroll="#security">Помощь</a>
+				</nav>
+				<button class="nav-toggle" id="nav_toggle" type="button">
+					<span class="nav-toggle__item"></span>
+				</button>
+				<div class="header__modal">
+					<button class="btn" id="btn-login" type="button">Войти</button>
+					<div class="modal" id="my-modal">
+						<div class="modal-content">
+							<span class="close">&times;</span>
+							<div class="modal-title">LaslesVPN</div>
+							<div class="modal-text">Вход в аккаунт:</div>
+							<form class="form">
+								<input type="email" name="name" placeholder="Введите ваш nickname" class="form__input">
+								<input type="password" name="name" placeholder="Введите ваш password " class="form__input">
+								<div class="form__center">
+									<button class="btn btn--cl form__btn" type="button">Войти</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<button class="btn btn--cl" onclick="toggle()" type="button">Зарегистрироваться</button>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<div id="blur">
+	<div class="intro">
+		<div class="container">
+			<div class="intro__item">
+				<div class="intro__col">
+					<div class="intro__content">
+						<h1 class="intro__title">Следим за легкостью использования <span>LaslesVPN.</span></h1>
+						<p class="intro__text">Предоставьте сеть для всех ваших потребностей с легкостью и весельем, используя Laslesvpn, чтобы узнать интересные функции от нас.</p>
+						<button class="btn btn--cl" type="button">Начать</button>
+					</div>
+				</div>
+				<div class="intro__col">
+					<img class="intro__img" src="images/Illustration1.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	
+	<div class="section section--logos">
+		<div class="container">
+			<div class="logos">
+				<div class="logo__item">
+					<img class="logos__img" src="images/wired-grey.svg" alt="">
+				</div>
+				<div class="logo__item">
+					<img class="logos__img" src="images/huffington-post-grey.svg" alt="">
+				</div>
+				<div class="logo__item">
+					<img class="logos__img" src="images/buzzfeed-grey.svg" alt="">
+				</div>
+				<div class="logo__item">
+					<img class="logos__img" src="images/forbes-grey.svg" alt="">
+				</div>
+				<div class="logo__item">
+					<img class="logos__img" src="images/tedx-grey.svg" alt="">
+				</div>
+				<div class="logo__item">
+					<img class="logos__img" src="images/bbc-grey.svg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<section class="section" id="security">
+		<div class="container">
+			<div class="section__header">
+				<h2 class="section__title">Вы в полной безопасности, что бы вы ни делали</h2>
+				<p class="section__text">Наши лучшие средства защиты и функции в одном аккаунте.</p>
+			</div>
+			<div class="security">
+				<div class="security__item">
+					<div class="security__inner">
+						<div class="security__header">
+						<img class="security__img" src="images/how-vpn-works.jpg" alt="">
+						</div>
+						<div class="security__content">
+							<h2 class="security__title">Менеджер паролей</h2>
+							<h3 class="security__subtitle">Безопасное хранение и организация паролей из любой точки мира.</h3>
+							<ul class="security__info">
+								<li>Генерация сложных паролей</li>
+								<li>Синхронизация со всеми вашими устройствами</li>
+								<li>Хранение заметок и банковских карт</li>
+							</ul>
+							<a class="security__link" href="#">Можно добавить при оплате.</a>
+						</div>
+					</div>
+				</div>
+				<div class="security__item">
+					<div class="security__inner">
+						<div class="security__header section__header-bg">
+							<img class="security__img" src="images/malware-research-social.png" alt="">
+						</div>
+						<div class="security__content">
+							<h2 class="security__title">Шифрование файлов в облаке</h2>
+							<h3 class="security__subtitle">Шифрование любых файлов и безопасное их хранение на компьютере или в облаке.</h3>
+							<ul class="security__info">
+								<li>10 Гб в личном облаке</li>
+								<li>Защита файлов простым перетаскиванием</li>
+								<li>Автоматическое резервирование данных</li>
+							</ul>
+							<a class="security__link" href="#">Можно добавить при оплате.</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section class="section" id="features">
+		<div class="container">
+			<div class="section__header">
+				<h2 class="section__title">Безопасность, которая вам нужна.<br> Функции, которые вам понравятся</h2>
+			</div>
+			<div class="tab">
+				<div class="tab__item dragscroll">
+					<button class="tablink" onclick="openTab(event, 'Tab1')" id="defaultOpen" type="button">
+						<img class="tab__img" src="images/icons8-multiple-devices-30.png" alt="">
+						<div class="tab__name">Устройств</div>
+					</button>
+					<button class="tablink" onclick="openTab(event, 'Tab2')" type="button">
+						<img class="tab__img" src="images/icons8-play-24.png" alt="">
+						<div class="tab__name">Потоковая передача</div>
+					</button>
+					<button class="tablink" onclick="openTab(event, 'Tab3')" type="button">
+						<img class="tab__img" src="images/icons8-privacy-policy-24.png" alt="">
+						<div class="tab__name">Безопасность</div>
+					</button>
+					<button class="tablink" onclick="openTab(event, 'Tab4')" type="button">
+						<img class="tab__img" src="images/icons8-speed-24.png" alt="">
+						<div class="tab__name">Скорость</div>
+					</button>
+					<button class="tablink" onclick="openTab(event, 'Tab5')" type="button">
+						<img class="tab__img" src="images/icons8-mark-view-as-hidden-32 (1).png" alt="">
+						<div class="tab__name">Конфиденциальность</div>
+					</button>
+				</div>
+			</div>
+			<div class="tabcontent" id="Tab1">
+				<div class="features ">
+					<div class="features__item">
+						<img class="features__img" src="images/hero-platforms.png" alt="">
+					</div>
+					<div class="features__item">
+						<div class="features__content">
+							<div class="features__text">
+								<p><span>Одна учетная запись, 6 устройств.</span> Защитите себя, своих друзей или домашнюю сеть, не заводя несколько учетных записей.</p>
+							</div>
+							<div class="features__text">
+								<p><span>Простое в использовании приложение.</span> Вам не нужно быть шифровальщиком, чтобы использовать NordVPN. Просто выберите сервер и подключитесь.</p>
+							</div>
+							<div class="features__text">
+								<p><span>Для всех гаджетов.</span> Получите NordVPN на свой мобильный, планшет или ноутбук. Не забудьте про smart TV и роутер.</p>
+							</div>
+							<div class="features__text">
+								<p><span>Доступно на: </span></p>
+							</div>
+						</div>
+						<a class="features__link" href="#">Получить сейчас</a>
+					</div>
+				</div>
+			</div>
+			<div class="tabcontent" id="Tab2">
+				<div class="features ">
+					<div class="features__item">
+						<img class="features__img" src="images/vpn-nordvpn-gaming-streaming.png" alt="">
+					</div>
+					<div class="features__item">
+						<div class="features__content">
+							<div class="features__text">
+								<p><span>Нет ограничений пропускной способности.</span> Идите вперед и смотрите следующий эпизод — благодаря NordVPN ваша пропускная способность неограничена.</p>
+							</div>
+							<div class="features__text">
+								<p><span>Прощай троттлинг ISP.</span> Смотрите трансляцию своих любимых телешоу и фильмов безопасно, без прерываний.</p>
+							</div>
+							<div class="features__text">
+								<p><span>Доступ по всему миру.</span> Подключайтесь к тысячам серверов в 59 странах, чтобы иметь безопасный доступ к любому контенту, где бы вы ни были.</p>
+							</div>
+							<div class="features__text">
+								<p><span>Круглосуточная служба клиентской поддержки.</span>  Есть вопросы? Свяжитесь с нашей службой поддержки Онлайн-консультант или напишите нам по электронной почте.Получить сейчас</p>
+							</div>
+							<a class="features__link" href="#">Получить сейчас</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tabcontent" id="Tab3">
+				<div class="features ">
+					<div class="features__item">
+						<img class="features__img" src="images/b2becommerce.jpg" alt="">
+					</div>
+					<div class="features__item">
+						<div class="features__content">
+							<div class="features__text">
+								<p><span>Безопасное подключение.</span> Защитите свои конфиденциальные данные от киберпреступников с помощью высококлассного алгоритма 256-битного шифрования.</p>
+							</div>
+							<div class="features__text">
+								<p><span>Автоматический Kill Switch.</span> Если подключение VPN случайно пропадает, автоматический аварийный выключатель (Kill Switch) блокирует доступ вашего устройства к Интернету.</p>
+							</div>
+							<div class="features__text">
+								<p><span>Технология CyberSec.</span> Защищает вас от доступа опасных веб-сайтов, на которых хранится вредоносное программное обеспечение.Получить сейчас</p>
+							</div>
+							<a class="features__link" href="#">Получить сейчас</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tabcontent" id="Tab4">
+				<div class="features ">
+					<div class="features__item">
+						<img class="features__img" src="images/streaming-throttle.png" alt="">
+					</div>
+					<div class="features__item">
+						<div class="features__content">
+							<div class="features__text">
+								<p><span>Молниеносные скорости.</span> Подключайтесь к более, чем 5200+ сверхбыстрых серверов по всему миру, чтобы насладиться быстрым и стабильным подключением в любом месте.</p>
+							</div>
+							<div class="features__text">
+								<p><span>Quick Connect.</span> Нажмите эту кнопку и сразу же подключайтесь к самому быстрому серверу, доступному в данный момент.</p>
+							</div>
+							<div class="features__text">
+								<p><span>Быстрая и безопасная P2P.</span> Сотни серверов по всему миру, оптимизированные для безопасного и плавного обмена файлами.Получить сейчас</p>
+							</div>
+							<a class="features__link" href="#">Получить сейчас</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tabcontent" id="Tab5">
+				<div class="features ">
+					<div class="features__item">
+						<img class="features__img" src="images/vpn-vpn-for-home-security-vpn-for-android-vpn-for-mobile.jpg" alt="">
+					</div>
+					<div class="features__item">
+						<div class="features__content">
+							<div class="features__text">
+								<p><span>Без жесткой политики регистрации.</span> Проверено компанией PricewaterhouseCoopers. Мы не отслеживаем, не собираем и не делимся вашими конфиденциальными данными.</p>
+							</div>
+							<div class="features__text">
+								<p><span>Защита IP.</span> Выберите сервер NordVPN и серфите в интернете под другим IP-адресом. Ваш IP и местоположение останутся в тайне.</p>
+							</div>
+							<div class="features__text">
+								<p><span>Конфиденциальный доступ.</span> Никто не увидит, что вы делаете в онлайне, и не воспользуется вашими интернет данными.Получить сейчас</p>
+							</div>
+							<a class="features__link" href="#">Получить сейчас</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section class="section">
+		<div class="container">
+			<div class="section__header">
+				<h2 class="section__title">LaslesVPN делает ваши данные в Интернете <br> недоступными для других пользователей</h2>
+				<p class="section__text">Подключайтесь и пользуйтесь Интернетом в полной конфиденциальности.</p>
+			</div>
+			<div class="unprotected">
+				<div class="unprotected__item">
+					<img class="unprotected__img" src="images/1.jpg" alt="">
+					<div class="unprotected__content">
+						<h3 class="unprotected__title">Защитите свои действия в сети</h3>
+						<p class="unprotected__text">Не позволяйте другим следить за вашими действиями в Интернете —воспользуйтесь VPN, чтобы изменить IP-адрес и скрыть виртуальное местоположение.</p>
+					</div>
+				</div>
+				<div class="unprotected__item">
+					<img class="unprotected__img" src="images/2.jpg" alt="">
+					<div class="unprotected__content">
+						<h3 class="unprotected__title">Безопасность всегда и везде</h3>
+						<p class="unprotected__text">NordVPN защищает ваш онлайн-трафик с помощью передовой технологии шифрования. Ваши конфиденциальные данные в безопасности, даже при подключении к общедоступному Wi-Fi или любой другой сети.</p>
+					</div>
+				</div>
+				<div class="unprotected__item">
+					<img class="unprotected__img" src="images/3.jpg" alt="">
+					<div class="unprotected__content">
+						<h3 class="unprotected__title">Получите полный доступ к контенту</h3>
+						<p class="unprotected__text">В разных странах Интернет регулируется по-разному. Обойдите цензуру и наслаждайтесь любимым контентом, подключившись к VPN-серверу.Получить сейчас</p>
+					</div>
+				</div>
+				<div class="unprotected__link">
+					<a class="features__link" href="#">Получить сейчас</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<div class="countries">
+		<div class="container">
+			<div class="countries__item">
+				<div class="countries__inner">
+					<img class="countries__img" src="images/map.svg" alt="">
+				</div>
+				<div class="countries__inner">
+					<div class="countries__content">
+						<h2 class="countries__title">Самая крупная в мире сеть серверов VPN</h2>
+						<p class="countries__text">Выберите среди тысячи сверхбыстрых серверов VPN всего мира. Наслаждайтесь быстрым и стабильным подключением, где бы вы ни были.</p>
+						<div class="service">
+							<div class="service__item">
+								<h3 class="service__title">Серверы VPN</h3>
+								<h4 class="service__price">5200+</h4>
+							</div>
+							<div class="service__item">
+								<h3 class="service__title">Cтранах</h3>
+								<h4 class="service__price">59</h4>
+							</div>
+							<div class="service__item">
+								<h3 class="service__title">Молниеносные скорости</h3>
+								<img class="service__img" src="images/servers-speed-icon.svg" alt="">
+							</div>
+							<div class="service__item">
+								<h3 class="service__title">Неограниченная полоса пропускания</h3>
+								<img class="service__img" src="images/servers-unlimited-icon.svg" alt="">
+							</div>
+						</div>
+						<a class="features__link" href="#">Получить сейчас</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="section moneyback">
+		<div class="container">
+			<div class="moneyback__item">
+				<div class="moneyback__col">
+					<img class="moneyback__img" src="images/hype-ru-consumer-r-rzB5EyDcy75psYkcnXrZPQ.jpeg" alt="">
+				</div>
+				<div class="moneyback__col">
+					<h2 class="moneyback__title">20-дневная гарантия возврата денег</h2>
+					<p class="moneyback__text">Попробуйте нашу отмеченную наградами службу без риска для вашего кошелька. Если вы не удовлетворены на 100 %, в течение 30 дней с момента покупки сообщите нам об этом и получите полный возврат.</p>
+					<a class="features__link features__link--bg" href="#">Попробовать безопасный LaslesVPN</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="section section--pricing" id="pricing">
+		<div class="container">
+			<div class="section__header">
+				<h2 class="section__title">Воспользуйтесь летним предложением: <br> 1 года со скидкой 63%</h2>
+				<p class="section__text">Вы также получите продление подписки в подарок — 2 месяца LaslesVPN БЕСПЛАТНО!</p>
+			</div>
+			<div class="pricing">
+				<div class="pricing__item">
+					<div class="pricing__inner">
+						<p class="pricing__plan">План на месяц</p>
+						<div class="pricing__num">11,95<span class="pricing__num-text">$</span></div>
+						<p class="pricing__text">в месяц</p>
+					</div>
+				</div>
+				<div class="pricing__item pricing__item--order">
+					<div class="pricing__inner pricing__inner--bg">
+						<p class="pricing__plan">План на месяц 1 год</p>
+						<div class="pricing__num pricing__num--big">3,48<span class="pricing__num-text">$</span></div>
+						<p class="pricing__text">в месяц</p>
+						<div class="pricing__card">Экономия 69%</div>
+						<div class="pricing__title">+ 3 месяца БЕСПЛАТНО</div>
+						<div class="pricing__w"><span>322,65</span> $99,00 $ за первые 2 года</div>
+						<a class="features__link" href="#">Получить сейчас</a>
+						<div class="pricing__monay">30-дневная гарантия возврата денег</div>
+					</div>
+				</div>
+				<div class="pricing__item">
+					<div class="pricing__inner">
+						<p class="pricing__plan">План на месяц</p>
+						<div class="pricing__num">4,25<span class="pricing__num-text">$</span></div>
+						<p class="pricing__text">в месяц</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<section class="section">
+		<div class="container">
+			<div class="section__header">
+				<h2 class="section__title">Вопросы? У нас есть ответы.</h2>
+			</div>
+			<div class="accordion">
+				<div class="accordion__item" data-collapse="#wedo__1">
+					<div class="accordion__header">
+						<h3 class="accordion__title">Можно ли купить приложение LaslesVPN в розничных магазинах?</h3>
+					</div>
+					<div class="accordion__content" id="wedo__1">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+				</div>
+				<div class="accordion__item" data-collapse="#wedo__1">
+					<div class="accordion__header">
+						<h3 class="accordion__title">Почему стоит выбрать LaslesVPN вместо бесплатного VPN?</h3>
+					</div>
+					<div class="accordion__content" id="wedo__1">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+				</div>
+				<div class="accordion__item" data-collapse="#wedo__1">
+					<div class="accordion__header">
+						<h3 class="accordion__title">Могу ли я использовать приложение за границей?</h3>
+					</div>
+					<div class="accordion__content" id="wedo__1">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+				</div>
+				<div class="accordion__item" data-collapse="#wedo__1">
+					<div class="accordion__header">
+						<h3 class="accordion__title">Как обновить тарифный план?</h3>
+					</div>
+					<div class="accordion__content" id="wedo__1">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+				</div>
+				<div class="accordion__item" data-collapse="#wedo__1">
+					<div class="accordion__header">
+						<h3 class="accordion__title">Работает ли LaslesVPN после закрытия приложения?</h3>
+					</div>
+					<div class="accordion__content" id="wedo__1">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<footer class="footer" id="contact">
+		<div class="container">
+			<div class="footer__item">
+				<div class="avatar">
+					<img class="avatar__item" src="images/logo.svg" alt="">
+					<div class="avatar__content">
+						<div class="avatar__title">LaslesVPN VPN</div>
+					</div>
+				</div>
+				<div class="footer__inner">
+					<a class="footer__item-link" href="#">
+						<img class="footer__img" src="images/apple.svg" alt="">
+						<span class="footer__item-link-name">Mac</span>
+					</a>
+					<a class="footer__item-link" href="#">
+						<img class="footer__img" src="images/ms-store.svg" alt="">
+						<span class="footer__item-link-name">Microsoft</span>
+					</a>
+					<a class="footer__item-link" href="#">
+						<img class="footer__img" src="images/msi.svg" alt="">
+						<span class="footer__item-link-name">MSI</span>
+					</a>
+					<a class="footer__item-link" href="#">
+						<img class="footer__img" src="images/edge.svg" alt="">
+						<span class="footer__item-link-name">MS Edge</span>
+					</a>
+					<a class="footer__item-link" href="#">
+						<img class="footer__img" src="images/android.svg" alt="">
+						<span class="footer__item-link-name">Google</span>
+					</a>
+					<a class="footer__item-link" href="#">
+						<img class="footer__img" src="images/mozilla.svg" alt="">
+						<span class="footer__item-link-name">Mozilla</span>
+					</a>
+					<a class="footer__item-link" href="#">
+						<img class="footer__img" src="images/chrome.svg" alt="">
+						<span class="footer__item-link-name">Chrome</span>
+					</a>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer__privacy-links">
+						<a href="#">Privacy policy</a>
+						<a href="#">Terms of service</a>
+						<a href="#">Contact Us</a>
+					</div>
+					<div class="footer__copyright">Copyright © 2020 LaslesVPN Inc. All Rights Reserved</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+	<script src="js/app.js"></script>
+	<script src="js/dragscroll.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+		  const $navItems = document.querySelector('.tab__item');
+		  const $navItemActive = $navItems.querySelector('.tab__item_active');
+		  const navItemsRect = $navItems.getBoundingClientRect();
+		  const navItemActiveRect = $navItemActive.getBoundingClientRect();
+		  const navItemsLeft = navItemActiveRect.left - navItemsRect.left + (navItemActiveRect.width - navItemsRect.width) / 1;
+		  $navItems.scrollLeft = navItemsLeft;
+		})
+	</script>
+	
+</body>
+</html>
